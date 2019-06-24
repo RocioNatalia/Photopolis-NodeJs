@@ -1,6 +1,8 @@
 const Sequelize = require ('sequelize')
 const connection = require ('../sql')
 
+//crea la tabla??
+
 const User=  connection.define('user' ,{
     username: {
         type :Sequelize.STRING,

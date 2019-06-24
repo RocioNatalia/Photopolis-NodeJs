@@ -9,7 +9,6 @@ const findUserById = async (req, res) => {
     } else {
         res.json({ response: 'not found' })
     }
-
 }
 
 //Registro

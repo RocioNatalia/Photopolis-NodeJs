@@ -12,7 +12,7 @@ api.get('/users/:id' , userController.findUserById)
 api.post('/register' , userController.register)
 api.post('/login' , userController.login)
 api.get('/user/:id/likes' , likesController.likesGet)
-api.post('/user/:id/likes' , likesController.likesSet)
+api.post('/images' , likesController.likesSet)
 
 
 module.exports = api
