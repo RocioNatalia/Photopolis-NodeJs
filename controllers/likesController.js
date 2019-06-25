@@ -10,14 +10,24 @@ const likesSet = async (req, res) => {
     res.json({ response: like })
 }
 
-
 //mostrar los likes del usuario por pantalla
-const likesGet = (req, res) => {
-    res.json({ response: 'likes del usuario' })
-}
+const likesGet = async (req, res) => {
+    let id = req.params.id;a
+    let usuario
+    let usuario = await Likes.findAll({ where: { user_id: id } })
 
+    console.log(usuario)
+
+    if (usuario.length != 0) {
+        res.json({ response: usuario })
+    } else {
+        res.json({ response: ' No ha dado ningun like' })
+    }
+
+}
 
 module.exports = {
     likesGet,
     likesSet
 }
+

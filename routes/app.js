@@ -11,7 +11,7 @@ api.get('/' , homeController.inicio)
 api.get('/users/:id' , userController.findUserById)
 api.post('/register' , userController.register)
 api.post('/login' , userController.login)
-api.get('/user/:id/likes' , likesController.likesGet)
+api.get('/userlikes/:id' , likesController.likesGet)
 api.post('/images' , likesController.likesSet)
 
 
