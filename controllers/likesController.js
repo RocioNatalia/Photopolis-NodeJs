@@ -44,6 +44,13 @@ const likesGet =(req, res) => {
 
     })
 }
+//borrar la imagen
+const deleLike =(req, res) => {
+  console.log(req.body)
+  const {photo_id , user_id } = req.body;
+  Likes.destroy({where : {photo_id , user_id}})
+  .then(response => res.json({result: `Foto ${photo_id} eliminada`}))
+}
 
 
     //usando la tabla de usuarios creada
@@ -66,5 +73,6 @@ const likesGet =(req, res) => {
 module.exports = {
     likesGet,
     likesSet,
+    deleLike,
 }
 

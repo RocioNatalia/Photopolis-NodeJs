@@ -11,6 +11,7 @@ api.post('/register' , userController.register)
 api.post('/login' , userController.login)
 api.get('/userlikes/:id' , likesController.likesGet)
 api.post('/images' , likesController.likesSet)
+api.delete('/delete' , likesController.deleLike)
 
 
 module.exports = api
