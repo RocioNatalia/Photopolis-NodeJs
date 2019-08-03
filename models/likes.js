@@ -7,11 +7,11 @@ const Likes = connection.define('likes', {
         type: Sequelize.STRING,
         allowNull: false,
     },
-    mail: {
+    photo_id: {
         type: Sequelize.STRING,
         allowNull: false,
     },
-    urlLike: {
+    url: {
         type: Sequelize.STRING,
         allowNull: false
     }

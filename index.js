@@ -15,7 +15,7 @@ connection
     app.use(bodyParser.json())
     
     app.use('/api', api)
-    app.listen(3000 , console.log('Sevidor funcionando'.blue))
+    app.listen(3001 , console.log('Sevidor funcionando'.blue))
 })
 .catch(err => console.log('no se puede establecer conexion'.red, err))
 
